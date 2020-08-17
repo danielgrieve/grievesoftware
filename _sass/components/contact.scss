@@ -37,7 +37,7 @@
     padding: 0;
     text-transform: uppercase;
 
-    @include for(tablet-portrait-up) {
+    @include for(tablet-landscape-up) {
       text-align: right;
     }
 

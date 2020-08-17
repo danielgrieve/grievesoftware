@@ -1,0 +1,23 @@
+<footer class="footer__wrapper">
+  <div class="footer__container">
+    <div>
+      <img src="/assets/logo.png" class="footer__logo" />
+
+      <div class="footer__contact"><a href="mailto: {{ site.email }}">{{ site.email }}</a></div>
+      <div class="footer__contact"><a href="tel: {{ site.phone }}">{{ site.phone }}</a></div>
+    </div>
+
+    <address class="footer__address">
+      Suite 18<br />
+      Novus Business Centre<br />
+      Judson Road<br />
+      Peterlee County Durham<br />
+      SR8 2QJ
+    </address>
+
+    <small class="footer__copyright">
+      &copy; Grieve Software Consulting Ltd. 2019-{{ "now" | date: "%Y" }}.
+      Company No. 11884417
+    </small>
+  </div>
+</footer>
