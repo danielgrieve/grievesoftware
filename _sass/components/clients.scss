@@ -1,0 +1,40 @@
+.clients {
+  &__wrapper {
+    @include wrapper;
+  }
+
+  &__container {
+    @include container;
+    padding: rem(40) 0 rem(60);
+  }
+
+  &__heading {
+    @include heading;
+  }
+
+  &__list {
+    display: grid;
+    grid-column-gap: rem(20);
+    grid-row-gap: rem(40);
+    grid-template-columns: repeat(1, 1fr);
+    list-style-type: none;
+    margin: 0;
+    padding: rem(20) 0 0;
+
+    @include for(tablet-portrait-up) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for(tablet-landscape-up) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      text-align: center;
+
+      img {
+        height: rem(40);
+      }
+    }
+  }
+}
