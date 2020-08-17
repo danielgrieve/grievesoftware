@@ -1,2 +1,4 @@
 title: Grieve Software Consulting
+email: hello@grievesoftware.com
+phone: "+44 123456789"
 exclude: ["Gemfile", "Gemfile.lock", "README.md"]

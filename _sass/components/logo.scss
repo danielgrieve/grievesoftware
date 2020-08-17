@@ -1,0 +1,40 @@
+.logo {
+  &__wrapper {
+    align-items: center;
+    display: flex;
+
+    @include for(phone-only) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    margin-bottom: rem(20);
+    width: rem(88);
+
+    @include for(tablet-portrait-up) {
+      margin-bottom: 0;
+      margin-right: rem(44);
+    }
+  }
+
+  &__heading {
+    color: $light;
+    font-size: rem(18);
+    font-weight: 400;
+    letter-spacing: rem(12);
+    line-height: rem(30);
+    text-transform: uppercase;
+
+    @include for(phone-only) {
+      text-align: center;
+    }
+
+    &--sub {
+      color: $primary;
+      display: block;
+      font-size: rem(14);
+      letter-spacing: rem(10);
+    }
+  }
+}

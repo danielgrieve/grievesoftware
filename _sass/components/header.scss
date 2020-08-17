@@ -1,0 +1,27 @@
+.header {
+  &__wrapper {
+    @include wrapper;
+    background: $dark no-repeat;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0,
+    0.6)), url(/assets/header__bg.jpg);
+    background-size: cover;
+  }
+
+  &__container {
+    @include container;
+    padding: rem(36) 0 rem(60);
+  }
+
+  &__copy {
+    color: $light;
+    font-size: rem(48);
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: rem(40);
+    max-width: rem(700);
+
+    span {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@mixin container() {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(414);
+  width: 100%;
+
+  @include for(tablet-portrait-up) {
+    max-width: rem(1024);
+  }
+}
+
+@mixin wrapper() {
+  padding-left: rem(22);
+  padding-right: rem(22);
+}
+
+@mixin for($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+@function rem($pixels) {
+  @if unitless($pixels) {
+    $pixels: $pixels * 1px;
+  }
+
+  @return ($pixels / 10px) * 1rem;
+}
